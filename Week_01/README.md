@@ -20,3 +20,11 @@
 classNname_JAVA_version去搜索类的说明
 3、实战题目-有效括号
 4、实战题目-最小栈
+5、Queue PriorityQueue源码分析
+Queue
+type: Interface
+
+
+PriorityQueue
+type:Class
+Implemented Interface:Queue

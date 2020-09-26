@@ -1,7 +1,0 @@
-Queue
-type: Interface
-
-
-PriorityQueue
-type:Class
-Implemented Interface:Queue
