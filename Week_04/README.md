@@ -61,6 +61,10 @@ public List<List<Integer>> levelOrder(TreeNode root) {
 贪心算法和动态规划的最大不同是它对每个子问题都作出选择不能回退，动态规划会保存以前的运算结果，并根据以前的结果对当前选择，并提供回退功能
 3、二分查找
 首先二分查找适用于有序集合的查找算法，时间复杂度可以达到O(logN)
+适用的前提
+A、目标函数的单调性（递增、递减）
+B、存在上下界
+C、能够通过索引访问
 重点是需要记住二分查找的代码模板：
 public int binarySearch(int[] array, int target) {
     int left = 0, right = array.length - 1, mid;
