@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.List;
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode() {}
+     TreeNode(int val) { this.val = val; }
+     TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        left = left;
+        right = right;
+    }
+}
+public class CenterOrder {
+    public List<Integer> result = new ArrayList<>();
+    public List<Integer> solution(TreeNode root) {
+        centerOrder(root);
+        return result;
+    }
+    private void centerOrder(TreeNode root){
+        if(root == null) return;
+        result.add(root.val);
+        centerOrder(root.left);
+        centerOrder((root.right));
+    }
+}
