@@ -1,0 +1,38 @@
+public class Scheduler {
+    public int leastInterval(char[] tasks, int n){
+        if(tasks.length == 0) return 0;
+        PriorityQueue queue = new PriorityQueue(26, Collections.reverse());
+        int[] map = new int[26]
+        for(char task : tasks){
+            map[task - 'A']++;
+        }
+        for(int m : map){
+            if(m > 0)
+            queue.add(m);
+        }
+
+        int time = 0;
+        while(!queue.isEmpty()){
+            int i = 0;
+            List<Integer> temp = new ArrayList<>();
+            while(i <=n){
+                if(!queue.isEmpty()){
+                    if(queue.peek() > 1){
+                        temp.add(queue.poll()-1);
+                    }
+                } else {
+                    queue.poll();
+                }
+            }
+            time++;
+            if(queue.isEmpty()&&temp.size() ==0){
+                break;
+            }
+            i++;
+        }
+        for(Integer t : temp){
+            queue.add(t);
+        }
+    }
+    return time;
+}
